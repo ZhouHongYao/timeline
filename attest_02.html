@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>涂料产业互联网一站式服务平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #header {
+            z-index: 30;
+        }
+
+        .timeline {
+            width: 100%;
+            height: auto;
+            padding-bottom: 1rem;
+            text-align: center;
+            font-size: 0px;
+        }
+
+        .timeline li {
+            position: relative;
+            display: inline-block;
+            zoom: 1;
+            width: auto;
+            font-size: 1.2rem;
+            padding: 1rem 0.5rem 0.5rem;
+        }
+
+        .timeline li .active::before {
+            background: 0% 0% / 10px 10px rgb(48, 137, 231) !important;
+            border: 2px solid rgb(192, 213, 241);
+            bottom: -3px !important;
+        }
+
+        .timeline li .clearline::after {
+            height: 0px !important;
+        }
+
+        .timeline li .time::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            bottom: 0px;
+            margin-bottom: -4px;
+            left: 50%;
+            margin-left: -8px;
+            background: 0% 0% / 10px 10px rgb(191, 191, 191);
+            border-radius: 100%;
+            z-index: 20;
+        }
+
+        .timeline .li-left .time::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -50%;
+            bottom: 0px;
+            width: 100%;
+            height: 1px;
+            background: rgb(34, 146, 214);
+            z-index: 10;
+        }
+
+        .timeline .li-center .time::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -50%;
+            bottom: 0px;
+            width: 100%;
+            height: 1px;
+            background: rgb(191, 191, 191);
+        }
+
+        .timeline .li-last .time::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -50%;
+            bottom: 0px;
+            width: 100%;
+            height: 1px;
+            background: rgb(191, 191, 191);
+        }
+
+        .active {
+            color: rgb(48, 137, 231);
+        }
+
+        .in_l {
+            text-align: left !important;
+            width: 90% !important;
+            right: 20px !important;
+        }
+
+        .in_r70 {
+            position: absolute;
+            right: 15px;
+        }
+
+        .sex {
+            display: inline-block;
+            width: 50px;
+            background-color: rgb(240, 239, 245);
+            height: 30px;
+            line-height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .sex-active {
+            color: #3089e7;
+            background-color: rgb(216, 235, 255) !important;
+            border: 1px solid #3089e7;
+        }
+
+        .rspan {
+            position: absolute;
+            right: 35px;
+            width: 45%;
+            height: 49px;
+            margin: 0;
+            border: none;
+            text-align: right;
+            font-size: 13px;
+            padding: 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">企业认证</h1>
+    </header>
+    <div class="mui-content attestation" v-cloak>
+        <div>
+            <ul class="timeline">
+                <li class="li-left">
+                    <p class="time active">基本信息</p>
+                </li>
+                <li class="li-center">
+                    <p class="time active clearline f15">联系人</p>
+                </li>
+                <li class="li-center">
+                    <p class="time">证件资质</p>
+                </li>
+                <li class="li-last">
+                    <p class="time">开通服务</p>
+                </li>
+            </ul>
+        </div>
+        <div class="form" style="padding-bottom: 70px;">
+            <ul style="margin:12px 0px 15px 0px;">
+                <li class="flex">
+                    <div class="name">姓名</div>
+                    <input type="text" placeholder="请输入" v-model="formData.contact">
+                </li>
+                <li class="flex">
+                    <div class="name">职位</div>
+                    <input type="text" placeholder="请输入" v-model="formData.job">
+                </li>
+                <li class="flex">
+                    <div class="name">手机号</div>
+                    <input type="text" placeholder="请输入" maxlength="11" v-model="formData.phone">
+                </li>
+                <li class="flex">
+                    <div class="name">邮箱</div>
+                    <input type="text" placeholder="请输入" v-model="formData.email">
+                </li>
+                <li class="flex">
+                    <input type="text" placeholder="固定电话（选填）" class="in_l" v-model="formData.tel" />
+                </li>
+                <li class="flex">
+                    <input type="text" placeholder="QQ（选填）" class="in_l" v-model="formData.qq" />
+                </li>
+                <li class="flex">
+                    <input type="text" placeholder="微信（选填）" class="in_l" v-model="formData.weixin" />
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+    mui.init();
+    //企业认证
+    var form = {
+        phone: "", //用户名
+        name: "", //企业单位名称
+        genre: "", //企业类型
+        genreId: "",
+        genre_text: "",
+        business_province: "", //公司地址 省Id
+        business_city: "", //公司地址 市Id
+        business_county: "", //公司地址 区Id
+        business_addr: "", //公司详细地址
+        province_txt: "",
+        city_txt: "",
+        county_txt: "",
+        industry: "", //主营业务
+        employee_text: "", //员工人数
+        employee_num: "", //员工人数id
+        profile: "", //公司简介
+        logo: "", //公司logo
+        www: "", //公司网址
+        contact: "", //联系人
+        job: "", //联系人职位
+        phone: "", //联系手机号
+        tel: "", //固定电话
+        sex: "2", //性别
+        qq: "",
+        weixin: "",
+        zzlx: "",
+        licence_type: "", //证照类型
+        code: "", //统一社会信用代码
+        license: "", //运营执照
+        faren: "", //法人代表
+        capital: null, //注册资本
+        licence_end_time_1: null, //有效期
+        is_danger: 0, //是否危险品
+        hazardous_chemicals_business_license: "", //化学品许可证
+        org_code: "", //组织机构代码证号
+        licence_end_time_2: "", //组织机构代码证有效期
+        org_code_pic: "", //组织机构代码证
+        banxue_licence: "", //办学许可证号
+        banxue_licence_type: "", //办学类型
+        banxue_person: "", //负责人
+        licence_end_time_3: null, //办学许可证有效期
+        banxue_licence_pic: "", //运营执照
+        institution_person_code: "", //事业单位法人证号
+        institution_person: "", //法人代表
+        institution_person_pic: "", //事业单位法人证
+        ranges: "", //主营产品
+        ranges_list: [], //主营产品
+        bk_name: "", //户名
+        bank_name: "", //开户银行
+        account: "", //账号
+        smscode: "", //验证码
+        is_zhangqi_pay: 0, //账期支付
+        is_huodao_pay: 0, //货到付款
+        is_online_pay: 0, //在线支付
+        pact: false, //协议
+        is_unline_pay: 0, //线下汇款
+        unline_pay_out_time: "", //线下汇款超时取消订单时长
+        jc_verify: 0, //开通检测服务
+        jiance_industry: "",
+        jiance_ranges: "", //服务描述
+        jiance_cnas_pic: "", //CNAS
+        jiance_cma_pic: "", //CMA
+        jiance_cal_pic: "", //CAL
+        zizhiImgs: [{
+            values: "",
+            url: ""
+        }], //其他
+        update_time: "", //更新时间
+        check_time: "", //审核时间
+        apply_time: "", //申请认证时间
+        reason: "", //审核原因
+        bargain: [] //交易方式
+    }
+    var app = new Vue({
+        el: '.mui-content',
+        data: {
+            formData: JSON.parse(JSON.stringify(form)),
+        },
+        created() {},
+        methods: {},
+    });
+</script>
+
+</html>

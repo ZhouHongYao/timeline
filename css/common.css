@@ -1,0 +1,130 @@
+*{font-family: "微软雅黑";}
+body{font-size: 14px;color: #666666;}
+ul,li{list-style:none;list-style-type:none;}
+b,i{font-weight: normal;font-style: normal;}
+.clearfix:after{clear:both;display:block;visibility:hidden;height:0;line-height:0;content:".";}
+.clearfix{*zoom:1;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+.fl{float: left;}
+.fr{float: right;}
+.cp{cursor: pointer;}
+.mui_noborder:after,.mui_noborder:before{height: 0;}
+a{color: inherit;}
+.mui-bar{background: #3089e7;height: 44px;box-shadow: none;}
+.height_all{height: 100%;}
+.c_000{color:#000}
+.c_333{color: #333333!important;}
+.c_666{color: #666666!important;}
+.c_999{color: #999999!important;}
+.bg_999{background: #999999!important;}
+.c_dd2727{color: #3089e7!important;}
+.c_fff{color:#fff}
+.c_f00{color:#f00}
+.bg_white{background: #fff}
+.bg_blue{background: #3089e7}
+.fs_12{font-size: 12px;}
+.fs16{font-size: 16px;}
+.f15{font-size: 15px !important;}
+.fb{font-weight: bold}
+.tx-c{text-align: center}
+/*页面去除初始化代码----by hangyi 2017-7-13*/
+[v-cloak]{display: none;}
+ul{padding: 0;}
+.byt_button{width: 90%;margin: 0 auto;height: 40px;line-height: 40px;background-color: #3089e7;color: white;font-size: 18px;font-weight: 400;padding: 0;border: none;border-radius: 3px;text-align: center;margin-top: 30px;}
+.relative{position: relative;}
+.pl05{padding-left: 5px;}
+.pl10{padding-left: 10px;}
+.pl15{padding-left: 15px;}
+.pl20{padding-left: 20px;}
+.pl25{padding-left: 25px;}
+.pl30{padding-left: 30px;}
+.pr05{padding-right: 5px;}
+.pr10{padding-right: 10px;}
+.pr15{padding-right: 15px;}
+.pr20{padding-right: 20px;}
+.pr25{padding-right: 25px;}
+.pr30{padding-right: 30px;}
+.pr100{padding-right: 100px;}
+.block{display: block;}
+.pt0{padding-top: 0!important;}
+.mt05{margin-top: 5px;}
+.mt10{margin-top:10px}
+.mt15{margin-top:15px}
+.ml5{margin-left:5px}
+.ml15{margin-left:15px}
+.hide{display: none}
+/*行高*/
+.lh_45{line-height: 45px;}
+.ds-blk{display: block}
+.hyttoast{position: absolute;top: 50%;width: 100%;text-align: center;opacity: 0;}
+.hyttoast img{width: 40px;height: 40px;}
+.hyttoast>div{max-width: 80%;display: inline-block;padding:15px 45px;background: rgba(0,0,0,0.7);border-radius: 5px;margin-top: -48px;}
+.hyttoast>div p{margin: 0;color: white;}
+
+.h21{height: 21px;}
+
+.mask{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.6);z-index: 50;}
+/*分享样式*/
+.mui-popup-backdrop.share-mask{
+    z-index: 2
+}
+.share-panel{
+    position: fixed;
+    bottom:0;
+    z-index: 4;
+    width:100%
+}
+.share-panel .share-ways{
+    display: flex;
+    display: -webkit-flex;
+    padding:22px 4.5% 20px 4.5%;
+    margin:0;
+    border-bottom: 1px solid #cecece;
+    font-size: 13px;
+    color:#333;
+    text-align: center
+}
+.share-panel .share-ways .share-item{
+    width:25%;
+    flex:1;
+}
+.share-panel .share-ways .share-item .share-pic{
+    display: inline-block;
+    width:50px;
+    height:50px
+}
+.share-panel .share-cancel-btn{
+    height:50px;
+    line-height: 50px;
+    font-size: 18px;
+    color:#333;
+    text-align: center
+}
+.share-panel .copy-box{
+    padding:16px 20px;
+    margin-top:-5px;
+    border-bottom: 1px solid #eaeaea;
+    background: #f1f1f1;
+    color:#333;
+    font-size:16px
+}
+.share-panel .copy-box .ulink-box{
+    width:100%;
+    line-height: 21px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d9d9d9
+}
+.share-panel .share-cancel-btn.copy-cancel{
+    background: #f8f8f8
+}
+.wx-share-txt{
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 12
+}
+#newBridge .nb-icon-right-bottom{    bottom: 51px !important;}
+#cnzz_stat_icon_1276026746{
+    display: none;
+}
